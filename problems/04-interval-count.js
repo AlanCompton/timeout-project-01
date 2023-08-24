@@ -18,7 +18,47 @@ intervalCount(function() {
 
 function intervalCount(cb, delay, amount) {
   // Your code here 
+
+  let count = 0;
+
+  let banana = setInterval(() => {
+    cb();
+    count++;
+    if (count === amount) {
+      clearInterval(banana)
+    }
+  }, delay);
+
+
+
+
+  //let x = setInterval(cb(), delay)
+
+
+  /*if (i === 3) {
+    clearInterval(x)
+  }
+
+  x()
+  i++*/
+
+  /*function banana(cb, delay) {
+    for (let i = -1; i <= amount; i++) {
+      return setInterval(cb, delay)
+
+      if (amount ===3) {
+        clearInterval
+      }
+    }
+    i++
+    return (banana(cb, delay))*/
+
 }
+
+
+intervalCount(function () {
+  console.log('hi');
+}, 500, 3); // prints 'hi' at 500ms intervals a total of 3 times
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
